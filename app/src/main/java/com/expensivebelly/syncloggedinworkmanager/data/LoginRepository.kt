@@ -1,13 +1,18 @@
 package com.expensivebelly.syncloggedinworkmanager.data
 
 import com.expensivebelly.syncloggedinworkmanager.data.model.LoggedInUser
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * Class that requests authentication and user information from the remote data source and
  * maintains an in-memory cache of login status and user credentials information.
  */
 
-class LoginRepository(val dataSource: LoginDataSource) {
+@Singleton
+class LoginRepository
+@Inject
+constructor(val dataSource: LoginDataSource) {
 
     // in-memory cache of the loggedInUser object
     var user: LoggedInUser? = null
