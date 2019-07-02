@@ -14,8 +14,18 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
             app:layout_constraintVertical_chainStyle="spread"
             tools:text="My message"/>
+
+    <Button
+            android:text="Upload"
+            android:id="@+id/button_upload"
+            app:layout_constraintBottom_toTopOf="@id/textview_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
 
     <Button
             android:id="@+id/button_logout"

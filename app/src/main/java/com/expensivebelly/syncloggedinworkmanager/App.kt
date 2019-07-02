@@ -17,4 +17,4 @@ class App : Application() {
 }
 
 val Context.applicationComponent
-    get() = (this as App).applicationComponent
+    get() = (this.applicationContext as App).applicationComponent
